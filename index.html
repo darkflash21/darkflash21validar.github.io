@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Programas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .menu-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        select, button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <h2>Selecciona un programa</h2>
+
+        <!-- Lista desplegable -->
+        <select id="programSelect">
+            <option value="#">Selecciona un programa</option>
+            <option value="program1.html">Programa 1</option>
+            <option value="program2.html">Programa 2</option>
+            <option value="program3.html">Programa 3</option>
+            <option value="program4.html">Programa 4</option>
+            <option value="program5.html">Programa 5</option>
+            <option value="program6.html">Programa 6</option>
+            <option value="program7.html">Programa 7</option>
+            <option value="program8.html">Programa 8</option>
+            <option value="program9.html">Programa 9</option>
+            <option value="program10.html">Programa 10</option>
+        </select>
+
+        <!-- Botón de redirección -->
+        <button onclick="redirect()">Ir al programa</button>
+    </div>
+
+    <script>
+        function redirect() {
+            // Obtener el valor seleccionado
+            const selectedProgram = document.getElementById("programSelect").value;
+
+            // Verificar que se seleccionó un programa válido
+            if (selectedProgram !== "#") {
+                // Redirigir a la URL del programa seleccionado
+                window.location.href = selectedProgram;
+            } else {
+                alert("Por favor, selecciona un programa.");
+            }
+        }
+    </script>
+
+</body>
+</html>
